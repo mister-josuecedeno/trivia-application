@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+  background-color: grey;
+  color: white;
+}
+
+main {
+  background-color: aliceblue;
+  height: 100vh;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+/* MENU */
+.menu {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link {
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: black;
+}
+
+.title {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+/* CARD */
+.card {
+  background-color: white;
+  padding: 1em;
+  width: 50%;
+  height: max-content;
+  box-shadow: -2px 2px 5px 0px lightgrey;
+}
+
+.element {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 3em;
+}
+
+.btn {
+  border: lightgrey solid 1px;
+  padding: 1em 2em;
+  width: max-content;
+  margin-top: 1em;
+  cursor: pointer;
+  box-shadow: -2px 2px 5px 0px lightgrey;
+}
+
+.next {
+  color: green;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: lightgrey;
+}
+
+.result-text {
+  padding-bottom: 1em;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+  }
+}
