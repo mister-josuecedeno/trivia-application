@@ -70,6 +70,10 @@ main {
   padding-bottom: 3em;
 }
 
+.question {
+  flex-basis: 35%;
+}
+
 .btn {
   border: lightgrey solid 1px;
   padding: 1em 2em;
@@ -80,7 +84,10 @@ main {
 }
 
 .next {
-  color: green;
+  color: white;
+  background-color: blue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .btn:hover,
