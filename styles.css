@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: grey;
+  background-color: blue;
   color: white;
 }
 
@@ -29,6 +29,8 @@ main {
 .menu-link {
   margin-right: 1em;
   cursor: pointer;
+  color: white;
+  font-size: 1.5em;
 }
 
 .menu-link:hover,
@@ -56,22 +58,27 @@ main {
 }
 
 .question-text {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 500;
   line-height: 1.5em;
   padding-bottom: 1.5em;
   text-align: center;
 }
 
-.questions {
+.answers {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 3em;
 }
 
-.question {
+.answer {
   flex-basis: 35%;
+}
+
+.no-click {
+  pointer-events: none;
+  background-color: lightgrey;
 }
 
 .btn {
@@ -81,9 +88,17 @@ main {
   margin-top: 1em;
   cursor: pointer;
   box-shadow: -2px 2px 5px 0px lightgrey;
+  border-radius: 5px;
 }
 
 .next {
+  color: white;
+  background-color: blue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.clear {
   color: white;
   background-color: blue;
   text-transform: uppercase;
@@ -99,7 +114,6 @@ main {
   padding-bottom: 1em;
   text-align: center;
   font-size: 1.25em;
-  font-weight: bold;
 }
 
 .controls {

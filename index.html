@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <title>Chingu Trivia</title>
 </head>
@@ -12,8 +13,8 @@
     <div class="menu">
       <div class='title'>Chingu Trivia</div>
       <div class="menu-links">
-        <span class="menu-link">Home</span>
-        <span class="menu-link">Questions</span>
+        <a class="menu-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josuecedeno/"><i class="fab fa-linkedin"></i></a>
+        <a class="menu-link" target="_blank" rel="noopener noreferrer" href="https://github.com/mister-josuecedeno"><i class="fab fa-github"></i></a>
       </div>
     </div>
     
@@ -21,27 +22,31 @@
   <main>
     <!-- CARD  -->
     <div class="card">
-      <!-- Place ELEMENT 'Question 1 / 10' -->
-      <div class="element">Question <span id="currentId">1</span> / <span id="totalIds">10</span></div>
-      
-      <!-- Includes question and four multiple choice -->
-      <div class="question-text" id="question-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus rem et in nemo illum nisi rerum neque id dicta. Eos voluptates dolores cupiditate deleniti quaerat nesciunt delectus, doloremque distinctio aperiam!</div>
-      
-      <div class="questions">
-        <div class="btn question" id="a">Answer A</div>
-        <div class="btn question" id="b">Answer B</div>
-        <div class="btn question" id="c">Answer C</div>
-        <div class="btn question" id="d">Answer D</div>
+      <!-- QUESTION -->
+      <div id="question">
+        <!-- Place ELEMENT 'Question 1 / 10' -->
+        <div class="element">Question <span id="currentId">1</span> / <span id="totalIds">10</span></div>
+              
+        <!-- Includes question and four multiple choice -->
+        <div class="question-text" id="question-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus rem et in nemo illum nisi rerum neque id dicta. Eos voluptates dolores cupiditate deleniti quaerat nesciunt delectus, doloremque distinctio aperiam!</div>
+
+        <div class="answers">
+          <div class="btn answer" id="a">Answer A</div>
+          <div class="btn answer" id="b">Answer B</div>
+          <div class="btn answer" id="c">Answer C</div>
+          <div class="btn answer" id="d">Answer D</div>
+        </div>
       </div>
       
       <!-- RESULT -->
       <div id="result">
         <!-- User MESSAGE - Right or wrong response -->
-        <div class="result-text">Correct! Great job!</div>      
+        <div class="result-text" id="message">Correct! Great job!</div>      
         <div class="controls">
           <!-- ADVANCE button (only once question has been answered) -->
           <div class="btn next" id="next">Next</div>
           <!-- CLEAR once done and include the score  -->
+          <div class="btn clear" id="clear">Try Again</div>
         </div>
       </div>
       
