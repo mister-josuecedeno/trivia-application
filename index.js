@@ -27,7 +27,7 @@ const setQuestion = () => {
 
   // Answer
   answer = quizQuestions[id].answer;
-  console.log('The answer is ' + answer);
+  //console.log('The answer is ' + answer);
 
   // How many questions
   totalIds.innerText = quizQuestions.length;
@@ -56,7 +56,6 @@ const checkAnswer = (e) => {
     showNext(true);
     showClear(false);
   } else {
-    console.log('Try again.');
     message.innerText = `Sorry. The answer is ${answer}.`;
     e.target.classList.add('failure');
     showMessage(true);
@@ -132,10 +131,9 @@ answerD.addEventListener('click', (e) => checkAnswer(e));
 next.addEventListener('click', () => {
   if (id < quizQuestions.length - 1) {
     id += 1;
-    console.log('Current Question: ', id + 1);
+    // console.log('Current Question: ', id + 1);
     setQuestion();
   } else {
-    console.log('Show the score and Clear');
     showQuestion(false);
 
     message.innerText = `You answered ${score} out of ${

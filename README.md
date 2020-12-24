@@ -14,7 +14,7 @@ The quiz data is sourced locally from an array provided by the Chingu team.
 
 - The quiz spans across 10 questions (with **no page reloads**)
 - Questions are loaded **one at a time**
-- The **Next** is not visible until an answer is selected
+- The **Next** button is not visible until an answer is selected
 - Once an answer is selected, it is **highlighted for correctness** and **all selections are disabled**
 - Once the quiz is completed, the **final score** is presented with a **Try Again** button
 
