@@ -25,3 +25,7 @@ No additional steps are required to run the project.
 ## Dependencies
 
 No dependencies are required to run the project.
+
+## Preview
+
+![demo](https://user-images.githubusercontent.com/47830532/103101148-de9e4200-45db-11eb-8ce5-373641a72b23.gif)
