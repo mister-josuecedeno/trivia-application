@@ -51,17 +51,20 @@ const checkAnswer = (e) => {
   if (selection === answer) {
     message.innerText = 'Well Done! Correct!';
     score++;
+    e.target.classList.add('success');
     showMessage(true);
     showNext(true);
     showClear(false);
   } else {
     console.log('Try again.');
     message.innerText = `Sorry. The answer is ${answer}.`;
+    e.target.classList.add('failure');
     showMessage(true);
     showNext(true);
     showClear(false);
   }
 
+  //markAnswers(true);
   enableAnswers(false);
   showResult(true);
 };
@@ -73,6 +76,8 @@ const enableAnswers = (enable) => {
       a.classList.add('no-click');
     } else {
       a.classList.remove('no-click');
+      a.classList.remove('success');
+      a.classList.remove('failure');
     }
   });
 };
@@ -133,7 +138,9 @@ next.addEventListener('click', () => {
     console.log('Show the score and Clear');
     showQuestion(false);
 
-    message.innerText = `You answered ${score} out of ${quizQuestions.length} correctly.`;
+    message.innerText = `You answered ${score} out of ${
+      quizQuestions.length
+    } (${((score / quizQuestions.length) * 100).toFixed(0)}%) correctly.`;
     showNext(false);
     showClear(true);
     showResult(true);

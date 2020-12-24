@@ -46,12 +46,13 @@ main {
 /* CARD */
 .card {
   background-color: white;
-  padding: 1em;
+  padding: 1.75em;
   width: 50%;
   height: max-content;
   box-shadow: -2px 2px 5px 0px lightgrey;
 }
 
+/* QUESTION and ANSWERS */
 .element {
   padding-bottom: 1em;
   text-align: center;
@@ -61,7 +62,7 @@ main {
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.5em;
-  padding-bottom: 1.5em;
+  padding-bottom: 0.5em;
   text-align: center;
 }
 
@@ -69,21 +70,39 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding-bottom: 3em;
+  padding-bottom: 0.5em;
 }
 
 .answer {
   flex-basis: 35%;
 }
 
+/* RESULT SECTION */
+.result-text {
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 1.25em;
+  letter-spacing: 0.125em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+}
+
+/* BUTTONS */
+
 .no-click {
   pointer-events: none;
-  background-color: lightgrey;
 }
+
+/* Change button color based on selection */
 
 .btn {
   border: lightgrey solid 1px;
-  padding: 1em 2em;
+  padding: 0.75em 2em;
   width: max-content;
   margin-top: 1em;
   cursor: pointer;
@@ -91,11 +110,17 @@ main {
   border-radius: 5px;
 }
 
+.btn:hover,
+.btn:focus {
+  filter: brightness(80%);
+}
+
 .next {
   color: white;
   background-color: blue;
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-size: 1.25em;
 }
 
 .clear {
@@ -105,20 +130,12 @@ main {
   letter-spacing: 3px;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: lightgrey;
+.success {
+  background-color: lightgreen;
 }
 
-.result-text {
-  padding-bottom: 1em;
-  text-align: center;
-  font-size: 1.25em;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-evenly;
+.failure {
+  background-color: rgb(250, 106, 106);
 }
 
 /* MEDIA QUERIES */
@@ -126,5 +143,18 @@ main {
 @media (max-width: 768px) {
   .card {
     width: 95%;
+  }
+
+  .question-text {
+    padding-bottom: 0.75em;
+  }
+
+  .answers {
+    padding-bottom: 0.3em;
+  }
+
+  .result-text {
+    padding-top: 1em;
+    padding-bottom: 0.1em;
   }
 }
